@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maerylle Gale J. Sangalang — Portfolio</title>
+  <style>
+    
+    { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height:100%; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background:#ffffff; color:#1f2937; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+
+   
+    :root{
+      --accent:#ff7c3f;      
+      --accent-700:lch(69.13% 57.93 57.89);   
+      --muted:#f3c1a4;       
+      --card-shadow: 0 8px 24px rgba(31,41,55,0.06);
+      --radius:14px;
+    }
+
+   
+    header { background: linear-gradient(180deg, rgba(255,182,193,0.08), transparent); padding:18px 14px; position:sticky; top:0; backdrop-filter: blur(4px); z-index:40; border-bottom:1px solid rgba(0,0,0,0.03); }
+    .container { max-width:1000px; margin:0 auto; padding:20px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .brand { display:flex; gap:12px; align-items:center; }
+    .logo { width:56px; height:56px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#ffdce6); display:flex; align-items:center; justify-content:center; font-weight:700; color:#94480a; box-shadow: 0 6px 18px rgba(0,0,0,0.04);}
+    nav { display:flex; gap:8px; align-items:center; }
+    nav a { padding:8px 10px; border-radius:10px; font-weight:600; color:#b95c0f; }
+    nav a:hover { background:rgba(255,182,193,0.14); }
+
+    main { padding-top:24px; padding-bottom:56px; }
+
+  
+    .hero { display:flex; gap:22px; align-items:center; background:transparent; padding:22px 0; flex-wrap:wrap; }
+    .hero-left { flex:1 1 420px; }
+    .hero-right { flex:0 0 260px; }
+
+    h1 { font-size:28px; color:#2a2a2a; margin-bottom:6px; }
+    .tagline { color:#4b5563; margin-bottom:12px; font-size:15px; }
+    .cta { background:var(--accent-700); color:white; padding:10px 14px; border-radius:12px; display:inline-block; font-weight:700; box-shadow:0 6px 16px rgba(255,138,163,0.12); }
+
+
+    section.card { background:#ffd5a5; border-radius:var(--radius); padding:18px; box-shadow:var(--card-shadow); margin-bottom:16px; }
+    .grid { display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+
+  
+    .about-grid { display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; }
+    .profile-photo { width:110px; height:110px; border-radius:14px; overflow:hidden; flex-shrink:0; background:linear-gradient(135deg,#fff0f2,#fffafc); display:flex; align-items:center; justify-content:center; box-shadow: 0 8px 18px rgba(0,0,0,0.04); }
+    .profile-photo svg { width:80px; height:80px; opacity:0.95; }
+    .small { font-size:13px; color:#6b7280; }
+
+    .skill-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .skill { background:var(--muted); color:#c96726; padding:8px 10px; border-radius:999px; font-weight:700; font-size:13px; }
+
+
+    .project { display:flex; gap:12px; align-items:flex-start; padding:8px; border-radius:12px; transition:transform .18s ease, box-shadow .18s ease; }
+    .project:hover { transform:translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.06); }
+    .thumbnail { width:140px; height:96px; border-radius:10px; overflow:hidden; flex-shrink:0; background:linear-gradient(135deg,#fff6f8,#fff); display:flex; align-items:center; justify-content:center; border:1px solid rgba(127,29,36,0.04); }
+    .project h3 { font-size:17px; margin-bottom:6px; color:#2b2b2b; }
+    .meta { font-size:13px; color:#6b7280; }
+
+    .tags { margin-top:8px; display:flex; gap:8px; flex-wrap:wrap; }
+    .tag-mini { background:#fff1f3; color:#8d4224; padding:6px 8px; border-radius:8px; font-size:13px; font-weight:700; }
+
+
+    .reflection { margin-top:8px; font-style:italic; color:#4b5563; font-size:14px; }
+
+    .contact-grid { display:grid; grid-template-columns:1fr 320px; gap:14px; align-items:start; }
+    input, textarea { width:90%; padding:10px 12px; border-radius:10px; border:1px solid #eee; font-size:14px; background:#fff; }
+    button { background:var(--accent-700); color:white; padding:10px 12px; border-radius:10px; font-weight:700; border:0; cursor:pointer; }
+
+    
+    footer { text-align:center; color:#6b7280; padding:18px 6px; font-size:14px; margin-top:8px; }
+
+   
+    @media (max-width:880px){
+      .contact-grid { grid-template-columns:1fr; }
+      .hero-right { order:2; width:100%; display:flex; justify-content:center; }
+      .hero-left { order:1; width:100%; }
+      .profile-photo { margin-bottom:6px; }
+      .thumbnail { width:100%; height:160px; }
+      .project { flex-direction:column; align-items:stretch; }
+    }
+
+  
+    a:focus, button:focus, input:focus, textarea:focus { outline:3px solid rgba(255,182,193,0.32); outline-offset:2px; border-color:var(--accent-700); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">
+        <img src="picture.jpg" width="83" height=" 110">
+        <div>
+          <div style="font-weight:800; color:#2b2b2b;">Maerylle Gale J. Sangalang</div>
+          <div class="small">BS Information Technology — Pamantasan ng Cabuyao</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#reflections">Reflections</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <!-- HERO -->
+    <section id="home" class="card hero" aria-labelledby="home-heading">
+      <div class="hero-left">
+        <h1 id="home-heading">Hi, I'm Gale!</h1>
+        <div class="tagline">A dreamer with a business mind and a coder's heart.</div>
+        <p class="small" style="margin-bottom:12px;">I combine creativity with technical skills to bring my ideas to life. I enjoy learning about coding, exploring business concepts, and creating projects that reflect both innovation and passion. I love turning simple ideas into meaningful work that inspires growth and self-expression.
+</p>
+        <a class="cta" href="#projects">See my work</a>
+      </div>
+
+      <div class="hero-right" aria-hidden="false">
+        <div style="max-width:260px; margin-left:auto;">
+          <div class="profile-photo" aria-hidden="true">
+            <!-- placeholder cute avatar SVG -->
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar placeholder">
+              <rect width="120" height="120" rx="12" fill="#fff0f6"/>
+              <g transform="translate(12,12)">
+                <circle cx="48" cy="36" r="22" fill="#ffddeb"/>
+                <rect x="6" y="70" width="84" height="26" rx="12" fill="#fff5f7"/>
+                <circle cx="36" cy="32" r="4" fill="#7b2d3b"/>
+                <circle cx="60" cy="32" r="4" fill="#7b2d3b"/>
+                <path d="M32 46 q8 8 16 0" stroke="#7b2d3b" stroke-width="2" fill="none" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div style="margin-top:12px; text-align:center;">
+            <div style="font-weight:700;">Maerylle Gale J. Sangalang</div>
+            <div class="small">BS Information Technology</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card" aria-labelledby="about-heading">
+      <h2 id="about-heading" style="margin-bottom:8px;">About Me</h2>
+      <div class="about-grid">
+        <div style="flex:1;">
+          <p class="small" style="margin-bottom:8px;">
+           I am a passionate and goal-oriented student who enjoys exploring creativity through technology and entrepreneurship. I have developed skills in coding, web design, and problem-solving, which I plan to use to build my own business in the future. I’m driven by the desire to keep learning, creating, and turning ideas into opportunities.
+          </p>
+          <p class="small"><strong>School:</strong> Pamantasan ng Cabuyao / University of Cabuyao<br>
+             <strong>Program:</strong> BS Information Technology</p>
+
+          <div style="margin-top:12px;">
+            <div style="font-weight:800; margin-bottom:8px;">Skills & Tools</div>
+            <div class="skill-list">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">Basic JavaScript</span>
+              <span class="skill">Design & Layout</span>
+              <span class="skill">Project Planning</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="width:260px;">
+          <div style="background:linear-gradient(180deg,#fff6f8,#fff); border-radius:12px; padding:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.03);">
+            <div style="font-weight:800; margin-bottom:6px;">Career goal</div>
+            <div class="small"> To start and grow my own succesful business while using my coding skills as a side hustle. I want to combine creativity, innovation, and technology, to build projects that not only support my business but also open opportunities for freelance work. In the future, I hope to become an entrepreneur and a skilled coder who creates solutions that make a difference</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="projects" class="card" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" style="margin-bottom:8px;">Portfolio- My Best Projects!</h2>
+      <p class="small" style="margin-bottom:10px;">A showcase of my growth as a student and creator through three meaningful projects that express my skills and individuality.</p>
+
+      <div class="grid">
+        <article class="project" aria-labelledby="proj-lab">
+          <div class="thumbnail" aria-hidden="true">
+            <img src="IMG_7431.JPEG" width="1170" height=" 1486">
+              <g transform="translate(10,12)" fill="#ff9fb6">
+              </g>
+            </svg>
+          </div>
+          <div>
+            <h3 id="proj-lab">HTML lab activity</h3>
+            <div class="meta">In this activity, I showcased my creativity by designing a personal webpage using HTML. It was my chancce to express myself through code and layout design.</div>
+            <div class="tags" aria-hidden="true">
+              <span class="tag-mini">Creative</span>
+              <span class="tag-mini">Expressive</span>
+            </div>
+        </article>
+
+        <article class="project" aria-labelledby="proj-exam">
+          <div class="thumbnail" aria-hidden="true">
+            <img src="IMG_7430.jpeg" width="1170" height=" 1486">
+              <g transform="translate(12,14)" fill="#ffd4de">
+              </g>
+            </svg>
+          </div>
+          <div>
+            <h3 id="proj-exam">Exam Score</h3>
+            <div class="meta">Our exam tested how well I understood everything we've learned so far. It was a great way to measure my progress and dedication.</div>
+            <div class="tags" aria-hidden="true">
+              <span class="tag-mini">Challenging</span>
+              <span class="tag-mini">Motivating</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="proj-quiz">
+          <div class="thumbnail" aria-hidden="true">
+            <img src="IMG_7429.jpeg" width="1170" height=" 1486">
+              <g transform="translate(16,12)" fill="#ffdbe6"></g>
+            </svg>
+          </div>
+          <div>
+            <h3 id="proj-quiz">Quiz</h3>
+            <div class="meta">This quiz allowed me to show what I've learned and how much I've improved in the subject. It was a great practice for applying my knowledge under pressure.</div>
+            <div class="tags" aria-hidden="true">
+              <span class="tag-mini">Visual</span>
+              <span class="tag-mini">Creative</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- REFLECTIONS -->
+    <section id="reflections" class="card" aria-labelledby="reflections-heading">
+      <h2 id="reflections-heading" style="margin-bottom:8px;">Reflections</h2>
+      <div class="grid">
+        <div>
+          <h3 style="margin-bottom:6px;">HTML lab activity</h3>
+          <p class="small">Creating our HTML lab activity taught me how to structure a webpage using proper tags and formatting. It was challenging at first to make links and layouts work correctly, but I learned to be patient and pay attention to details. In the end, I felt proud seeing my page come to life and function as expected.</p>
+        </div>
+        <div>
+          <h3 style="margin-bottom:6px;">Exam Score</h3>
+          <p class="small">I got a score of 48/70 on our exam, and it made me feel realize which topics I still need to improve on. The test was challenging, especially the parts that required deeper understanding. Still, I'm proud of myself. Not bad for someone who doesn't have any background in coding.</p>
+        </div>
+        <div>
+          <h3 style="margin-bottom:6px;">Quiz</h3>
+          <p class="small"> Duringour quiz, I was able to apply what I studied, but still I faced some tricky parts. Scoring 18 points showed me that I'm making progress, even if there's room for improvement. It encouraged me to review more consistently and build confidence in my learning process.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" style="margin-bottom:8px;">Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p class="small">I'd love to hear from you — questions, collabs, or project feedback welcome!</p>
+          <ul style="margin-top:8px; color:#4b5563;">
+            <li><strong>Email:</strong> <a href="mailto:maeryllegale@gmail.com">maeryllegale@gmail.com</a></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/ma3rylle/">@Ma3rylle</a></li>
+            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/ma3rylle">Gale Sangalang</a></li>
+          </ul>
+        </div>
+
+        <form id="contactForm" aria-label="Contact form">
+          <label for="name" class="small">Your name</label>
+          <input id="name" name="name" placeholder="Jane" required />
+          <label for="email" class="small" style="margin-top:8px;">Your email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <label for="message" class="small" style="margin-top:8px;">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Hi Gale — I liked ..."></textarea>
+          <div style="margin-top:8px;">
+            <button type="submit">Send message</button>
+            <div id="formMsg" class="small" aria-live="polite" style="margin-top:8px;"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Maerylle Gale J. Sangalang — BS Information Technology • Pamantasan ng Cabuyao
+    </div>
+  </footer>
+
+  <script>
+    // small JS: year, smooth nav, simple contact fallback
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+
+    
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const n = form.name.value.trim();
+      const em = form.email.value.trim();
+      const m = form.message.value.trim();
+      if(!n || !em){
+        msg.style.color = '#b91c1c';
+        msg.textContent = 'Please include your name and email.';
+        return;
+      }
+      const subject = encodeURIComponent('Portfolio message from ' + n);
+      const body = encodeURIComponent((m || 'Hello!') + '\n\n' + n + '\n' + em);
+      window.location.href = 'mailto:maeryllegale@gmail.com?subject=' + subject + '&body=' + body;
+      msg.style.color = '#065f46';
+      msg.textContent = "Mail client opened (or copy this email): maeryllegale@gmail.com";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
+
